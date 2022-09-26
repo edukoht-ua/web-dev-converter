@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;600;700&display=swap');
+
+body {
+    font-family: 'Josefin Sans';
+    color: #68904D;
+    font-size: 32px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 900;
+    text-align: center;
+    color: #DA6A00;
+}
+
+.main-content {
+    background-color: #C8D2D1;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px;
+    width: 1200px;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.col-50 {
+    width: 49%;
+    padding: 40px;
+}
+
+.input {
+    width: 60%;
+    height: 32px;
+    font-size: 25px;
+    border: 0px;
+    border-radius: 10px;
+    color: #DA6A00;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.output-container {
+    display: flex;
+}
+
+.units-list {
+    margin-top: 40px;
+    padding: 10px;
+    border: 4px solid #EE9B01;
+    border-radius: 15px;
+}
+
+.unit {
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #68904D;
+    margin: 12px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.unit:hover {
+    background-color: #EE9B01;
+}
+
+.checked {
+    background-color: #EE9B01;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#convertButton {
+    color: #14471E;
+    background-color: #DA6A00;
+    border: 1px solid #DA6A00;
+    border-radius: 15px;
+    font-size: 32px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+#convertButton:hover {
+    background-color: #EE9B01;
+}

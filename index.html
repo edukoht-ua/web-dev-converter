@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Conventer</title>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Length Converter</h1>
+        <div class="display-flex">
+            <div class="col-50">
+                From:
+                <input id="input" class="input">
+                <div class="units-list" id="unitsFrom">
+                    <div class="unit">meter</div>
+                    <div class="unit">milimeter</div>
+                    <div class="unit">centimeter</div>
+                    <div class="unit">kilometer</div>
+                    <div class="unit">mile</div>
+                </div>
+            </div>
+            <div class="col-50">
+                <div class="output-container">
+                    <span style="margin-right: 10px;">To: </span>
+                    <div class="input" id="output"></div>
+                </div>
+                <div class="units-list" id="unitsTo">
+                    <div class="unit">meter</div>
+                    <div class="unit">milimeter</div>
+                    <div class="unit">centimeter</div>
+                    <div class="unit">kilometer</div>
+                    <div class="unit">mile</div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <button id="convertButton">Convert!</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
