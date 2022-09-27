@@ -64,4 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
         unitsFrom.appendChild(unitFrom);
         unitsTo.appendChild(unitTo);
     }
-})
+});
