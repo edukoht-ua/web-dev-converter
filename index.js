@@ -20,33 +20,6 @@ let checkedTo = document.createElement("div");
 checkedFrom.classList.add("checked");
 checkedTo.classList.add("checked");
 
-let unitFrom;
-let unitTo;
-
-for (let unitFrom of unitsFrom.children) {
-    unitFrom.addEventListener("click", () => {
-        if (!unitFrom.classList.contains("checked")) {
-            unitFrom.classList.add("checked");
-            checkedFrom.classList.remove("checked");
-            checkedFrom = unitFrom;
-        } else {
-            unitFrom.classList.remove("checked");
-        }
-    });
-}
-
-for (let unitTo of unitsTo.children) {
-    unitTo.addEventListener("click", () => {
-        if (!unitTo.classList.contains("checked")) {
-            unitTo.classList.add("checked");
-            checkedTo.classList.remove("checked");
-            checkedTo = unitTo;
-        } else {
-            unitTo.classList.remove("checked");
-        }
-    });
-}
-
 convertButton.addEventListener("click", () => {
     if (checkedFrom.innerHTML === "" || checkedTo.innerHTML === "") {
         alert("Some of the units are undefiend!");
@@ -54,3 +27,41 @@ convertButton.addEventListener("click", () => {
         output.innerHTML = input.value / unitsMap.get(checkedFrom.innerHTML) * unitsMap.get(checkedTo.innerHTML);
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    for(unit of unitsMap) {
+        const unitFrom = document.createElement("div");
+        const unitTo = document.createElement("div");
+
+        unitFrom.classList.add("unit");
+        unitTo.classList.add("unit");
+
+        unitFrom.innerHTML = unit[0];
+        unitTo.innerHTML = unit[0];
+
+        unitFrom.addEventListener("click", () => {
+            if (!unitFrom.classList.contains("checked")) {
+                unitFrom.classList.add("checked");
+                checkedFrom.classList.remove("checked");
+                checkedFrom = unitFrom;
+            } else {
+                unitFrom.classList.remove("checked");
+                
+            }
+        });
+
+
+        unitTo.addEventListener("click", () => {
+            if (!unitTo.classList.contains("checked")) {
+                unitTo.classList.add("checked");
+                checkedTo.classList.remove("checked");
+                checkedTo = unitTo;
+            } else {
+                unitTo.classList.remove("checked");
+            }
+        });
+
+        unitsFrom.appendChild(unitFrom);
+        unitsTo.appendChild(unitTo);
+    }
+})
